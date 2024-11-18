@@ -9,8 +9,17 @@ function createWindow(): void {
     width: 900,
     height: 670,
     show: false,
+    backgroundMaterial: 'acrylic',
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
+    center: true,
+    title: 'EchoMark',
+    frame: false,
+    vibrancy: 'under-window',
+    visualEffectState: 'active',
+    titleBarStyle: 'hidden',
+
+    trafficLightPosition: { x: 15, y: 10 },
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
